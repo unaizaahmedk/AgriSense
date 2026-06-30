@@ -1,0 +1,38 @@
+{
+  "shape": [
+    1525,
+    18
+  ],
+  "year_min": 2000,
+  "year_max": 2024,
+  "districts": 17,
+  "crops": 4,
+  "district_crop_panels": 61,
+  "constant_numeric_columns": [
+    "VPD",
+    "RH"
+  ],
+  "missing_by_column": {
+    "DISTRICT": 0,
+    "YEAR": 0,
+    "PRODUCTION": 0,
+    "AREA": 0,
+    "YIELD": 0,
+    "GDD": 0,
+    "HEAT_STRESS_DAYS": 0,
+    "PRECIP": 0,
+    "PET": 0,
+    "P_MINUS_PET": 0,
+    "TMEAN": 0,
+    "TMX": 0,
+    "TMN": 0,
+    "DTR": 0,
+    "VPD": 0,
+    "RH": 0,
+    "VAP_KPA": 0,
+    "CROP": 0
+  },
+  "yield_formula_mean_abs_error": 0.07718970747110337,
+  "yield_formula_max_abs_error": 7.349999999999994,
+  "rows_with_area_below_1": 232
+}
