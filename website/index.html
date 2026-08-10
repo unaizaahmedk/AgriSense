@@ -1991,11 +1991,37 @@
     max-width:100% !important;
     overflow-wrap:break-word !important;
   }
+  /* The green header height was a fixed 175px background stop, unrelated to
+     actual text height. Once headings wrap to multiple lines on smaller
+     screens, that fixed height cuts the green box short and the text spills
+     into the white cards below. Make the green hug the head block itself
+     instead of relying on a fixed-height section background. */
+  .problem-section,.Solution-section,.team-section,.demo-section{
+    background:var(--section-bg) !important;
+  }
+  .problem-head,.Solution-head,.team-head,.demo-intro{
+    background:var(--section-green);
+    margin-left:-24px !important;
+    margin-right:-24px !important;
+    padding-left:24px !important;
+    padding-right:24px !important;
+    padding-bottom:24px !important;
+    min-height:0 !important;
+  }
+  .problem-grid,.Solution-grid,.team-row-wrap,.demo-grid{
+    margin-top:16px !important;
+  }
 }
 @media(max-width:640px){
   .problem-section,.Solution-section,.team-section,.demo-section{ padding-left:18px !important; padding-right:18px !important; }
   .problem-grid,.Solution-grid,.team-row{ grid-template-columns:1fr !important; }
-  .problem-head,.Solution-head,.team-head,.demo-intro{ min-height:145px; padding-top:24px; }
+  .problem-head,.Solution-head,.team-head,.demo-intro{
+    padding-top:24px;
+    margin-left:-18px !important;
+    margin-right:-18px !important;
+    padding-left:18px !important;
+    padding-right:18px !important;
+  }
   .problem-heading,.Solution-heading,.team-heading,.demo-heading{ font-size:28px !important; }
   .problem-heading,.Solution-heading,.problem-sub,.Solution-sub{
     white-space:normal !important;
@@ -2464,7 +2490,7 @@
               <input type="text" id="contact-last-name" name="Last Name" placeholder="e.g. Ive">
               <div class="field-error-msg">
                 <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10 6.5v4M10 13.5h.01M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0Z" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                <span>Please enter your last name.</span>
+                <span id="err-email-text">Please enter your last name.</span>
             </div>
             </div>
           </div>
