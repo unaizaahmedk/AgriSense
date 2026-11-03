@@ -1,0 +1,15 @@
+{
+    "selection_criterion": "minimum_mean_temporal_cv_rmse",
+    "selected_model": "RF",
+    "selected_trial": 29,
+    "cv_rmse": 5.238900472061285,
+    "cv_mae": 2.1484253162233147,
+    "cv_r2": 0.9442276050433788,
+    "params": {
+        "bootstrap": true,
+        "max_depth": 10,
+        "max_features": "sqrt",
+        "min_samples_leaf": 1,
+        "n_estimators": 450
+    }
+}
